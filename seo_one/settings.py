@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = '3o%$scpfgn(gwr+=+h(#u+$-adrh+x6gtgt+za@91t268031ac'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'seo_one.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS':  [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
