@@ -7,7 +7,31 @@
 	<link rel="stylesheet" href="{% static 'projects/css/style.css' %}">
 </head>
 <body>
-    {% block header %}{% endblock %}
+    <header>
+		<nav class="menu-top">
+			<span class="element-of-menu"><a href="#">Projects</a></span>
+			<span class="element-of-menu"><a href="#">Tasks</a></span>
+		</nav>
+		<div class="open-ceo-logo">
+			<a href="#" target="_self">
+				<img class="open-ceo-logo" src="{% static "projects/img/logo_main.png" %}" alt="Open SEO">
+			</a>
+		</div>
+		<div class="lower-menu">
+			<div>
+				<a href="#"><span class="element-of-menu plus">&#10010;</span></a>
+			</div>
+			<div>
+				<span class="element-of-menu">sort by:</span>
+			</div>
+			<div>
+				<span class="element-of-menu">importance</span>
+			</div>
+			<div>
+				<span class="element-of-menu">urgency</span>
+			</div>
+		</div>
+	</header>
     {% block table %}{% endblock %}
 </body>
 </html>

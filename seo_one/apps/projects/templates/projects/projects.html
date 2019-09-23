@@ -1,55 +1,49 @@
 {% extends 'projects/base.html' %}
-{% load static %}
-{% block header %}
-    <header>
-		<nav class="menu-top">
-			<span class="element-of-menu"><a href="#">Projects</a></span>
-			<span class="element-of-menu"><a href="#">Administration</a></span>
-		</nav>
-		<div class="open-ceo-logo">
-			<a href="#" target="_self">
-				<img class="open-ceo-logo" src="{% static "projects/img/logo_main.png" %}" alt="Open SEO">
-			</a>
-		</div>
-		<div class="lower-menu">
-			<div>
-				<a href="#"><span class="element-of-menu plus">&#10010;</span></a>
-			</div>
-			<div>
-				<span class="element-of-menu">sort by:</span>
-			</div>
-			<div>
-				<span class="element-of-menu">importance</span>
-			</div>
-			<div>
-				<span class="element-of-menu">urgency</span>
-			</div>
-		</div>
-	</header>
-{% endblock %}
+
 {% block table %}
-    <div>
-		<table>
-			<tr class="table-header-big">
-				<td rowspan="2" style="width: 1%;">№</td>
-				<td rowspan="2" style="min-width: 23%;">Проект</td>
-				<td colspan="2">Время</td>
-				<td colspan="3">Задачи</td>
-				<td colspan="3">Показатели</td>
-				<td colspan="2">Информация</td>
-			</tr>
-			<tr class="table-header-little">
-				<td>план</td>
-				<td>факт.</td>
-				<td>не утвер.</td>
-				<td>работ.</td>
-				<td>в плане</td>
-				<td>янд</td>
-				<td>гугл</td>
-				<td>ср.</td>
-				<td>дата</td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
+    {% if projects %}
+        <div>
+            <table>
+                <tr class="table-header-big">
+                    <td rowspan="2" style="width: 1%;">№</td>
+                    <td rowspan="2" style="min-width: 23%;">Проект</td>
+                    <td colspan="2">Время</td>
+                    <td colspan="3">Задачи</td>
+                    <td colspan="3">Показатели</td>
+                    <td colspan="2">Информация</td>
+                </tr>
+                <tr class="table-header-little">
+                    <td>план</td>
+                    <td>факт.</td>
+                    <td>не утвер.</td>
+                    <td>работ.</td>
+                    <td>в плане</td>
+                    <td>янд</td>
+                    <td>гугл</td>
+                    <td>ср.</td>
+                    <td>дата</td>
+                    <td></td>
+                </tr>
+                    {% for project in projects %}
+                        <tr class="table-header-content">
+                            <td></td>
+                            <td>{{ project.domain_names }}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>{{ project.period_date }}</td>
+                            <td></td>
+                        </tr>
+                    {% endfor %}
+            </table>
+        </div>
+    {% else %}
+        <h4>У пользователя {{ user }} нет проектов</h4>
+    {% endif %}
+    <h5>{{ m }}</h5>
 {% endblock %}

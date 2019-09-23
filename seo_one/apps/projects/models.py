@@ -31,6 +31,9 @@ class Project(models.Model):
 	def __str__(self):
 		return "{} {} {}".format(self.domain_names, self.user, self.period_date)
 
+	def get_attributes(self, user_id):
+		pass
+
 
 class Admin_panel(models.Model):
 	link = models.CharField(max_length=30)
