@@ -1,0 +1,88 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+table {
+	min-width: 800px;
+	background-color: white;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	border: 1px solid grey;
+	padding: 3px;
+	text-align: center;
+	width: 5%;
+}
+
+.menu-top {
+	padding-top: 40px;
+	margin: 5px;
+	position:relative;
+	width: 90%;
+	display: inline-flex;
+}
+
+.lower-menu {
+	margin: 5px;
+	width: 90%;
+	display: inline-flex;
+}
+
+.open-ceo-logo {
+	position:absolute;
+ 	top:5px;
+ 	right: 30px;
+ 	width: 80px;
+}
+
+.element-of-menu {
+	padding-left: 5px;
+}
+
+.plus {
+	position: relative; top: -3px;
+	padding-right: 5px;
+	font-size: 140%;
+	color: green;
+	text-align: center;
+}
+
+.table-header-little td {
+	font-size: 80%;
+}
+
+.table-header-content td {
+	font-size: 80%;
+}
+
+.project-title {
+	float: left;
+	padding-left: 20px;
+}
+
+.project-info {
+	float: right;
+	padding-right: 20px;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}

@@ -31,8 +31,8 @@ class Project(models.Model):
 	def __str__(self):
 		return "{} {} {}".format(self.domain_names, self.user, self.period_date)
 
-	def get_attributes(self, user_id):
-		pass
+	def get_title(self):
+		return self.domain_names.lstrip('https://').lstrip('www.').rstrip('/')
 
 
 class Admin_panel(models.Model):
