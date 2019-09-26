@@ -83,7 +83,7 @@ class Google_account(models.Model):
 
 
 class Standart_task(models.Model):
-	standart_task_tatle = models.CharField(max_length=30, unique=True)
+	standart_task_tatle = models.CharField(max_length=50, unique=True)
 	standart_task_text = models.TextField(blank=True)
 	norm_of_time = models.TimeField(blank=True)
 	create_date = models.DateTimeField(auto_now=False, auto_now_add=True)

@@ -1,0 +1,12 @@
+<tr class="table-header-content">
+    <td></td>
+    <td colspan="11" >
+        {% if list_tasks_project|length < 1 %}
+            <span>Нет задач</span>
+        {% else %}
+            {% for task in  list_tasks_project %}
+                <div>{{ task }}</div>
+            {% endfor %}
+        {% endif %}
+    </td>
+</tr>

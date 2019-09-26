@@ -67,6 +67,17 @@ td {
 	padding-right: 20px;
 }
 
+.show-project {
+	border: none; 
+	color: black; 
+	font-size: 120%;
+	background-color: transparent;
+}
+
+.show-project:hover {
+	text-decoration: underline;
+}
+
 a:link {
 	text-decoration: none;
 	color: black;
